@@ -1,2 +1,0 @@
-0
-a:4:{s:9:"autowired";s:30:"PhSpring\Annotations\Autowired";s:7:"request";s:31:"PhSpring\Engine\Adapter\Request";s:8:"response";s:32:"PhSpring\Engine\Adapter\Response";s:17:"responseinterface";s:41:"PhSpring\Engine\Adapter\ResponseInterface";}

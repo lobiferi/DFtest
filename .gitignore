@@ -2,3 +2,5 @@
 /nginx.error.log
 /nginx.access.log
 /cli-config.php
+/application/tmp/AnnotationCache/
+/nbproject/

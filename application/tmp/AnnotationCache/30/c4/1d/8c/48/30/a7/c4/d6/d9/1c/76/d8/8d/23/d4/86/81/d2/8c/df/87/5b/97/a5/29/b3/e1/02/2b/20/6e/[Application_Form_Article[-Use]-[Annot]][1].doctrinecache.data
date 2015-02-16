@@ -1,2 +1,0 @@
-0
-a:3:{s:6:"length";s:46:"Symfony\Component\Validator\Constraints\Length";s:8:"notblank";s:48:"Symfony\Component\Validator\Constraints\NotBlank";s:7:"notnull";s:47:"Symfony\Component\Validator\Constraints\NotNull";}

@@ -1,2 +1,0 @@
-0
-a:3:{i:0;O:47:"Symfony\Component\Validator\Constraints\NotNull":3:{s:7:"message";s:30:"This value should not be null.";s:7:"payload";N;s:6:"groups";a:1:{i:0;s:7:"Default";}}i:1;O:48:"Symfony\Component\Validator\Constraints\NotBlank":3:{s:7:"message";s:31:"This value should not be blank.";s:7:"payload";N;s:6:"groups";a:1:{i:0;s:7:"Default";}}i:2;O:45:"Symfony\Component\Validator\Constraints\Email":6:{s:7:"message";s:40:"This value is not a valid email address.";s:7:"checkMX";b:0;s:9:"checkHost";b:0;s:6:"strict";N;s:7:"payload";N;s:6:"groups";a:1:{i:0;s:7:"Default";}}}

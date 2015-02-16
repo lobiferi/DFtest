@@ -1,2 +1,0 @@
-0
-a:7:{s:7:"request";s:31:"PhSpring\Engine\Adapter\Request";s:16:"requestinterface";s:40:"PhSpring\Engine\Adapter\RequestInterface";s:17:"zend_mail_message";s:17:"Zend_Mail_Message";s:14:"zend_mail_part";s:14:"Zend_Mail_Part";s:9:"zend_mime";s:9:"Zend_Mime";s:16:"zend_mime_decode";s:16:"Zend_Mime_Decode";s:14:"zend_mime_part";s:14:"Zend_Mime_Part";}
