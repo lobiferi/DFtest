@@ -1,0 +1,18 @@
+<pre><?php var_dump($this->errors)?></pre>
+<form method="post" action="/article/<?php echo $this->form->getId(); ?>">
+    <input type="hidden" name="article.id" value="<?php echo $this->form->getId(); ?>">
+    <fieldset>
+        <legend>New article</legend>
+        <div>
+            <label>Name of article: </label>
+            <input name="article.title" value="<?php echo $this->form->getTitle();?>"/>
+            <?php if (isset($this->errors) && array_key_exists('title', $this->errors)): ?><p style="color:red;"><?php echo $this->errors['title'] ?></p><?php endif; ?>
+        </div>
+        <div>
+            <label>Content: </label>
+            <textarea name="article.content" cols="60" rows="10"><?php echo $this->form->getContent();?></textarea>
+            <?php if (isset($this->errors) && array_key_exists('content', $this->errors)): ?><p style="color:red;"><?php echo $this->errors['content'] ?></p><?php endif; ?>
+        </div>
+    </fieldset>
+    <input type="submit" value="SAVE"/>
+</form>

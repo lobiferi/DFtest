@@ -1,0 +1,2 @@
+0
+a:2:{i:0;O:35:"PhSpring\Annotations\RequestMapping":3:{s:5:"value";s:4:"/new";s:6:"method";i:1;s:6:"params";N;}i:1;O:35:"PhSpring\Annotations\ModelAttribute":1:{s:5:"value";s:7:"article";}}

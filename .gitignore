@@ -1,0 +1,4 @@
+/vendor/
+/nginx.error.log
+/nginx.access.log
+/cli-config.php

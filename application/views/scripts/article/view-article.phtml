@@ -1,0 +1,31 @@
+<header><h3><?php echo $this->article->getPosts()->getTitle(); ?></h3></header>
+<article>
+    <?php echo $this->article->getText(); ?>
+</article>
+<footer>at <?php echo $this->article->getPosts()->getDate()->format('d-m-Y H:i') ?> by <?php echo $this->article->getPosts()->getUsers()->getName() ?></footer>
+<section>
+    <header>
+        <h4>Comments</h4>
+    </header>
+    <?php if (!$this->article->getPosts()->getComments()->count()): ?>
+        <p>There are no comments yet for this article</p>
+        <?php
+        $addCommentText = 'Be first to comment';
+        include 'add-comment.phtml'
+        ?>        
+    <?php else: ?>
+        <?php
+        $addCommentText = 'Add my conmment';
+        include 'add-comment.phtml'
+        ?>        
+            <?php foreach ($this->article->getPosts()->getComments() as $comment): ?>
+            <div class="form-group">
+                <span><?php echo $comment->getUsers()->getName(); ?></span> | <span class="small"><?php echo $comment->getUsers()->getEmail(); ?></span>
+        <?php echo $comment->getText(); ?>
+                </p>
+                <span class="small">at <?php echo $comment->getDate()->format('d-m-Y H:i') ?> by <?php echo $comment->getUsers()->getName() ?></span>        
+            </div>
+    <?php endforeach; ?>
+<?php endif; ?>
+
+</section>

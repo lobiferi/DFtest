@@ -1,0 +1,2 @@
+0
+a:3:{i:0;O:35:"PhSpring\Annotations\RequestMapping":3:{s:5:"value";s:12:"/(?P<id>\d+)";s:6:"method";i:1;s:6:"params";N;}i:1;O:33:"PhSpring\Annotations\RequestParam":3:{s:12:"defaultValue";s:17:"****UNDEFINED****";s:8:"required";b:1;s:5:"value";s:2:"id";}i:2;O:35:"PhSpring\Annotations\ModelAttribute":1:{s:5:"value";s:7:"comment";}}

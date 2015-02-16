@@ -1,0 +1,2 @@
+0
+a:7:{s:6:"helper";s:26:"PhSpring\Annotation\Helper";s:9:"autowired";s:30:"PhSpring\Annotations\Autowired";s:6:"config";s:27:"PhSpring\Annotations\Config";s:9:"constants";s:25:"PhSpring\Engine\Constants";s:18:"iannotationhandler";s:42:"PhSpring\Engine\Handler\IAnnotationHandler";s:18:"reflectionproperty";s:18:"ReflectionProperty";s:9:"reflector";s:9:"Reflector";}

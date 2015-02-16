@@ -1,0 +1,2 @@
+0
+a:4:{i:0;O:31:"PhSpring\Annotations\Controller":2:{s:5:"scope";s:9:"singleton";s:4:"name";N;}i:1;O:35:"PhSpring\Annotations\RequestMapping":3:{s:5:"value";s:8:"/article";s:6:"method";i:255;s:6:"params";N;}i:2;O:38:"PhSpring\Annotations\SessionAttributes":2:{s:4:"name";s:7:"article";s:4:"type";s:25:"\Application_Form_Article";}i:3;O:38:"PhSpring\Annotations\SessionAttributes":2:{s:4:"name";s:7:"comment";s:4:"type";s:25:"\Application_Form_Comment";}}

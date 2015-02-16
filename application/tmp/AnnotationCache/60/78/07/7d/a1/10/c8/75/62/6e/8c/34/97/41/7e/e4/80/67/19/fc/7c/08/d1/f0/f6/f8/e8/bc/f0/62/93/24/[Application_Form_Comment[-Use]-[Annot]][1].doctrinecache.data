@@ -1,0 +1,2 @@
+0
+a:4:{s:5:"email";s:45:"Symfony\Component\Validator\Constraints\Email";s:8:"notblank";s:48:"Symfony\Component\Validator\Constraints\NotBlank";s:7:"notnull";s:47:"Symfony\Component\Validator\Constraints\NotNull";s:6:"length";s:46:"Symfony\Component\Validator\Constraints\Length";}
