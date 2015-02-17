@@ -7,7 +7,7 @@
             <h3>Sorry! Don't have any article! :( </h3>
         </header>
     </article>
-<?php
+    <?php
 else:
     foreach ($this->posts as $post):
         ?>
@@ -15,17 +15,17 @@ else:
             <header>
                 <h3><a href="/article/<?php echo $post->getPosts()->getId() ?>"><?php echo $post->getPosts()->getTitle() ?></a></h3>
             </header>
-        <?php 
-                $words = preg_split('~[^\S]+~u',strip_tags($post->getText()));
-                $chunk = '';
-                foreach ($words as $word){
-                    if(strlen($chunk)+strlen($word)>220){
-                        break;
-                    }
-                    $chunk.=' '. $word;
+            <?php
+            $words = preg_split('~[^\S]+~u', strip_tags($post->getText()));
+            $chunk = '';
+            foreach ($words as $word) {
+                if (strlen($chunk) + strlen($word) > 220) {
+                    break;
                 }
-                echo $chunk;
-                ?>
+                $chunk.=' ' . $word;
+            }
+            echo $chunk;
+            ?>
             <footer class="small">at <?php echo $post->getPosts()->getDate()->format('d-m-Y H:i') ?> <br/>by <?php echo $post->getPosts()->getUsers()->getName() ?> - <a href="/article/<?php echo $post->getPosts()->getId() ?>">more</a></footer>
         </article>
         <?php
