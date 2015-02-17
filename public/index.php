@@ -15,6 +15,12 @@ set_include_path(implode(PATH_SEPARATOR, array(
     get_include_path(),
 )));
 
+if(!file_exists(APPLICATION_PATH.'/tmp')){
+    mkdir(APPLICATION_PATH.'/tmp');
+}
+if(!file_exists(APPLICATION_PATH.'/tmp/AnnotationCache')){
+    mkdir(APPLICATION_PATH.'/tmp/AnnotationCache');
+}
 
 $loader = require_once APPLICATION_PATH . '/../vendor/autoload.php';
 
