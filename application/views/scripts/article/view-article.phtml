@@ -1,5 +1,5 @@
 <header><h3><?php echo $this->article->getPosts()->getTitle(); ?></h3></header>
-<article>
+<article class="clearfix">
     <?php echo $this->article->getText(); ?>
 </article>
 <footer>at <?php echo $this->article->getPosts()->getDate()->format('d-m-Y H:i') ?> by <?php echo $this->article->getPosts()->getUsers()->getName() ?></footer>
