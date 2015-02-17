@@ -44,13 +44,13 @@ class EntityManager extends DoctrineEntityManager {
             $clazz = $this->conf->cache;
             $cache = new $clazz();
         }
-        $config->setProxyDir(APPLICATION_PATH . '/persistent/Proxies');
-        $config->setProxyNamespace('Proxies');
+        $config->setProxyDir($this->conf->proxyDir);
+        $config->setProxyNamespace($this->conf->proxyNamespace);
 
-        $config->setAutoGenerateProxyClasses((APPLICATION_ENV == "development"));
+        $config->setAutoGenerateProxyClasses($this->conf->autoGenerateProxyClasses);
         AnnotationRegistry::registerFile((new ReflectionClass(AnnotationDriver::class))->getFileName());
         $reader = new AnnotationReader();
-        $driverImpl = new AnnotationDriver($reader, array(APPLICATION_PATH . "/persistent/Entities"));
+        $driverImpl = new AnnotationDriver($reader, array($this->conf->persistentEntitiesDir));
         $config->setMetadataDriverImpl($driverImpl);
 
         $config->setMetadataCacheImpl($cache);

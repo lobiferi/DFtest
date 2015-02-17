@@ -1,17 +1,18 @@
+<?php require_once __DIR__ . '/../../helpers/addError.php'; ?>
 <div class="form-group">
-    <a href="#addComment" <?php if (empty($this->errors)): ?>data-toggle="collapse"<?php endif;?>><?php echo $addCommentText ?></a>
-    <form class="form-horizontal clearfix <?php if (empty($this->errors)): ?>collapsing<?php endif;?>" action="/comment/new" method="POST" id="addComment">
+    <a href="#addComment" <?php if (empty($this->errors)): ?>data-toggle="collapse"<?php endif; ?>><?php echo $addCommentText ?></a>
+    <form class="form-horizontal clearfix <?php if (empty($this->errors)): ?>collapsing<?php endif; ?>" action="/comment/new" method="POST" id="addComment">
         <input type="hidden" name="comment.post" value="<?php echo $this->article->getPosts()->getId() ?>"/>
         <fieldset class="col-sm-6">
             <div class="form-group">
                 <label>Your email address:</label><input class="form-control" type="email" required placeholder="john@doe.com" name="comment.user" value="<?php echo $this->comment->getUser(); ?>"/>
-                <?php if (isset($this->errors) && array_key_exists('comment.user', $this->errors)): ?><span class="error"><?php echo $this->errors['comment.user'] ?></span><?php endif; ?>
+                <?php showError('comment.user'); ?>
             </div>
             <div class="form-group">
                 <label>Your comment</label><textarea class="form-control" name="comment.text"><?php echo $this->comment->getText() ?></textarea>
-                <?php if (isset($this->errors) && array_key_exists('comment.text', $this->errors)): ?><span class="bg-danger text-danger"><?php echo $this->errors['comment.text'] ?><?php endif; ?>
+                <?php showError('comment.text'); ?>
             </div>
-            <div class="form-group"><input type="submit" class="btn btn-success" value="Send" <?php if (isset($this->errors) && array_key_exists('comment.text', $this->errors)): ?>autofocus<?php endif; ?> /></div>
+            <div class="form-group"><input type="submit" class="btn btn-success" value="Send" <?php if (isset($this->errors)): ?>autofocus<?php endif; ?> /></div>
         </fieldset>
     </form>
 </div>

@@ -12,12 +12,6 @@ use PhSpring\Annotations\Valid;
 use PhSpring\Engine\BindingResult;
 use PhSpring\Engine\DefaultSessionAttributeStore;
 
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
-
 /**
  * Description of CommentController
  *

@@ -11,13 +11,6 @@ use PhSpring\Annotations\SessionAttributes;
 use PhSpring\Annotations\Valid;
 use PhSpring\Engine\BindingResult;
 use PhSpring\Engine\DefaultSessionAttributeStore;
-use Symfony\Component\Validator\ConstraintViolation;
-
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 
 /**
  * @Controller
@@ -48,11 +41,7 @@ class ArticleController {
         $sessionStore->cleanupAttribute(Application_Form_Article::class . '-result');
         $ret = array("form" => $article);
         if ($result && $result->count() > 0) {
-            $ret['errors'] = array();
-            foreach ($result as $error) {
-                /* @var $error ConstraintViolation */
-                $ret['errors'][$error->getPropertyPath()] = $error->getMessage();
-            }
+            $ret['errors'] = $result->toArray();
         }
         return $ret;
     }
@@ -97,6 +86,9 @@ class ArticleController {
      */
     public function viewArticle($id, Application_Form_Comment $comment, DefaultSessionAttributeStore $sessionStore) {
         $ret = array('article' => $this->em->getRepository(Application_Model_Details::class)->findOneByPosts($id));
+        if (!$ret['article']) {
+            $this->redirect->gotoUrl('/');
+        }
         $result = $sessionStore->retrieveAttribute(Application_Form_Comment::class . '-result');
         $sessionStore->cleanupAttribute(Application_Form_Comment::class . '-result');
         if ($result && $result->count() > 0) {

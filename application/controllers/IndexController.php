@@ -15,10 +15,6 @@ class IndexController {
      */
     private $em;
 
-    public function init() {
-        /* Initialize action controller here */
-    }
-
     public function index() {
         $ret = array();
 
